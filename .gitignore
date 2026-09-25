@@ -1,0 +1,48 @@
+### CLion / CMake / C++ Build Artifacts ###
+.vscode
+cmake-build-*/
+build/
+out/
+vcpkg_**/
+*.pdb
+.vs/
+.cmake/
+_deps/
+.cache/
+compile_commands.json
+cmake_install.cmake
+install_manifest.txt
+CTestTestfile.cmake
+
+### JetBrains/CLion Project Settings ###
+# Ignore the entire .idea folder ONLY if you work entirely alone.
+# Otherwise, keep shared settings and ignore user-specific files below:
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+
+# Ignore generated storage files
+.idea/caches/
+.idea/dataSources/
+.idea/dataSources.local.xml
+.idea/sqlDataSources.xml
+.idea/dynamic.xml
+
+# Ignore log files and user credentials
+.idea/httpRequests/
+.idea/vcs.xml
+
+### OS-specific / Tool Artifacts ###
+*.dmg
+*.exe
+*.out
+*.app
+*.a
+*.o
+*.so
+.DS_Store
+Thumbs.db
+.env
+.temps/

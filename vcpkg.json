@@ -1,0 +1,29 @@
+{
+  "name": "spark",
+  "version-string": "1.0.0",
+  "builtin-baseline": "84bab45d415d22042bd0b9081aea57f362da3f35",
+  "dependencies": [
+    {
+      "name": "sdl3",
+      "version>=": "3.4.16",
+      "features": [
+        "vulkan"
+      ]
+    },
+    {
+      "name": "vcpkg-cmake-config",
+      "version>=": "2026-07-21"
+    },
+    {
+      "name": "vcpkg-cmake",
+      "version>=": "2025-08-07"
+    },
+    {
+      "name": "gtest"
+    },
+    {
+      "name": "vulkan",
+      "version>=": "2023-12-17"
+    }
+  ]
+}

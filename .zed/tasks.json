@@ -1,0 +1,44 @@
+[
+  {
+    "label": "CMake: Configure (preset: clang)",
+    "command": "cmake --preset clang",
+    "tags": ["clang"],
+    "allow_concurrent_runs": false,
+    "use_new_terminal": true
+  },
+  {
+    "label": "CMake: Build (preset: clang)",
+    "command": "cmake --build ./build/clang",
+    "tags": ["clang"],
+    "allow_concurrent_runs": false,
+    "use_new_terminal": true
+  },
+  {
+    "label": "CTest: Foundation (preset: clang)",
+    "command": "ctest --test-dir ./build/clang --output-on-failure --repeat until-fail:2",
+    "tags": ["clang", "test"],
+    "allow_concurrent_runs": false,
+    "use_new_terminal": true
+  },
+  {
+    "label": "Cmake: Clear cache (preset: clang)",
+    "command": "cmake --preset clang --fresh",
+    "tags": ["clang"],
+    "allow_concurrent_runs": false,
+    "use_new_terminal": true
+  },
+  {
+    "label": "clangd: Clear cached indexes (preset: clang)",
+    "command": "rm -rf ./build/clang/.cache/clangd",
+    "tags": ["clang"],
+    "allow_concurrent_runs": false,
+    "use_new_terminal": true
+  },
+  {
+    "label": "Spark: Run Sandbox (preset: clang)",
+    "command": "./build/clang/Sandbox/SparkSandbox",
+    "tags": ["clang"],
+    "allow_concurrent_runs": false,
+    "use_new_terminal": true
+  }
+]

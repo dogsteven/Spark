@@ -1,0 +1,19 @@
+{
+  "lsp": {
+    "clangd": {
+      "binary": {
+        "path": "clangd",
+        "arguments": [
+          "--clang-tidy",
+          "--background-index",
+          "--header-insertion=iwyu",
+          "--pretty",
+          "--fallback-style=llvm",
+          "--experimental-modules-support",
+          "--compile-commands-dir=build/clang"
+        ]
+      }
+    }
+  },
+  "tab_size": 2
+}

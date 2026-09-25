@@ -1,0 +1,40 @@
+{
+  "version": 6,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 23,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "vcpkg-base",
+      "hidden": true,
+      "generator": "Ninja",
+      "cacheVariables": {
+        "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+      }
+    },
+    {
+      "name": "clang",
+      "inherits": "vcpkg-base",
+      "displayName": "Clang + Ninja + Vcpkg",
+      "description": "Build using the Clang compiler",
+      "binaryDir": "${sourceDir}/build/clang",
+      "environment": {
+        "VCPKG_SSL_REVOKE_BEST_EFFORT": "1",
+        "VCPKG_KEEP_ENV_VARS": "VCPKG_SSL_REVOKE_BEST_EFFORT;$penv{VCPKG_KEEP_ENV_VARS}"
+      },
+      "cacheVariables": {
+        "CMAKE_C_COMPILER": "clang",
+        "CMAKE_CXX_COMPILER": "clang++"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "clang",
+      "configurePreset": "clang"
+    }
+  ]
+}
