@@ -40,3 +40,21 @@ target_sources(SparkEngineFoundation
   Math/LinearAlgebra.cpp
   Math/Quaternions.cpp
 )
+
+target_sources(SparkEngineFoundation
+  PUBLIC FILE_SET memory_modules TYPE CXX_MODULES FILES
+  Memory/Memory.cppm
+  Memory/LinearAllocator.cppm
+  Memory/PoolAllocator.cppm
+
+  PRIVATE
+  Memory/LinearAllocator.cpp
+)
+
+target_sources(SparkEngineFoundation
+  PUBLIC FILE_SET utilities_modules TYPE CXX_MODULES FILES
+  Utilities/Janitor.cppm
+
+  PRIVATE
+  Utilities/Janitor.cpp
+)
